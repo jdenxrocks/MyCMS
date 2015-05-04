@@ -1,6 +1,6 @@
 <?php
 // Include autoloader
-require 'lib/Dwoo/Autoloader.php';
+require 'MyCMS/Dwoo/lib/dwooAutoload.php';
 
 // Register Dwoo namespace and register autoloader
 $autoloader = new Dwoo\Autoloader();
