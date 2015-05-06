@@ -23,7 +23,7 @@ Class Template {
         } 
     function __construct($myfile) {
         $this->getfile = $myfile;
-        $this->content = file_get_contents($myfile);
+        $this->content = $this->url_get_contents($myfile);
         return 1;
     }   
     function set($tag, $value) {
