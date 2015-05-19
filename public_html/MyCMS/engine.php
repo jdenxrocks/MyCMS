@@ -3,7 +3,7 @@ Class Template {
     var $getfile;
     var $content;
 
-    function url_get_contents ($url) {
+    function url_get_contents ($url) {//Find the most efficient possible way to grab data
         if (function_exists('curl_exec')){ 
             $conn = curl_init($url);
             curl_setopt($conn, CURLOPT_SSL_VERIFYPEER, true);
@@ -23,7 +23,7 @@ Class Template {
         } 
     function __construct($myfile) {
         $this->getfile = $myfile;
-        $this->content = $this->url_get_contents($myfile);
+        $this->content = file_get_contents($myfile);
         return 1;
     }   
     function set($tag, $value) {

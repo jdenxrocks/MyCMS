@@ -1,0 +1,6 @@
+{
+    "author": "Jayden",
+    "date": "2015-04-13",
+    "title": "Authentication",
+    "content": "<img src=\"http:\/\/i.imgur.com\/QDX7QH7.png\" style=\"border:solid 1px black;\">\n<p>Support for an authentication framework is in the works. I have searched high and low for a framework that supports the needs for MyCMS and I haven't found anything. I've decided to rebuild the wheel and create a framework specifically for MyCMS. The framework will use PDO and the latest BCRYPT hashing\/salting functions. <\/p>\n"
+}
