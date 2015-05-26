@@ -28,9 +28,9 @@ class MyCMS {
         fclose($myfile);
         return true;
     }
-    function newPost($author, $date, $title, $content){
+    function postIds() {
         //Get post ID'S
-        $dirs = glob("data/posts" . '/*' , GLOB_ONLYDIR);
+        $dirs = glob(__DIR__ . "/data/posts" . '/*' , GLOB_ONLYDIR);
         $postids = array();
         foreach ($dirs as $a) {
             $a = explode("/", $a);
@@ -38,8 +38,13 @@ class MyCMS {
             $a = (int) $a;
             array_push($postids, $a);
         }
+        return $postids;
+    }
+    function newPost($author, $date, $title, $content){
+        //Get post ID'S
+        $postids = $this->postIds();
         $newid = max($postids)+1;
-        $path = "data/posts/" . $newid;
+        $path = __DIR__ . "/data/posts/" . $newid . "/";
         if (!file_exists($path)) {
             mkdir($path, 0777, true);
         }
@@ -50,12 +55,17 @@ class MyCMS {
             "content" => $content
             );
         $json = json_encode($json, JSON_PRETTY_PRINT);
-        return $this->newFile($path . "/post.json", $json);
+        $this->newFile($path . "/post.json", $json);
+        if (file_exists($path . "/post.json")) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
     function getPost($id) {
         //Get post ID'S
-        $dirs = glob("data/posts" . '/*' , GLOB_ONLYDIR);
+        $dirs = glob(__DIR__ . "/data/posts" . '/*' , GLOB_ONLYDIR);
         $postids = array();
         foreach ($dirs as $a) {
             $a = explode("/", $a);
@@ -72,8 +82,8 @@ class MyCMS {
         return $post;
     }
 }
-/*
-$mycms = new MyCMS();
+
+/*$mycms = new MyCMS();
 $string = <<<HTML
 <img src="http://i.imgur.com/QDX7QH7.png" style="border:solid 1px black;">
 <p>Support for an authentication framework is in the works. I have searched high and low for a framework that supports the needs for MyCMS and I haven't found anything. I've decided to rebuild the wheel and create a framework specifically for MyCMS. The framework will use PDO and the latest BCRYPT hashing/salting functions. </p>

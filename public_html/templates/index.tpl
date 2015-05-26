@@ -84,7 +84,7 @@
 							<a href="#">Link</a>
 						</li>
 						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">[@username]<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">Action</a>
