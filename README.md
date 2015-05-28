@@ -1,4 +1,4 @@
 # MyCMS
 Creating a CMS for my Web Design Class
 
-http://mycms.2fh.co/
+https://mycms-jdenxrocks-1.c9.io/public_html/index.php
