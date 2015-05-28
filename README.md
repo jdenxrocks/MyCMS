@@ -1,7 +1,7 @@
 # MyCMS
 Creating a CMS for my Web Design Class
 
-https://mycms-jdenxrocks-1.c9.io/public_html/index.php
+http://bit.do/MyCMStest
 
 Try it out on your phone!
 
