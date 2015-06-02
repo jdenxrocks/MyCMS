@@ -1,0 +1,6 @@
+{
+    "author": "Jayden",
+    "date": "6\/2\/2015",
+    "title": "An update",
+    "content": "The templating engine that MyCMS run on, which is yet to be named, has seen some improvements. The system now supports blocks that are similar to FOR loops<br \/>\n<pre><code class=\"language-css\">\n[@block] [@inline->1][@inline->2][@\/block]\n<\/code><\/pre>"
+}

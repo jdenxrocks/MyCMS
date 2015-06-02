@@ -28,7 +28,7 @@ class MyCMS {
         fclose($myfile);
         return true;
     }
-    function postIds() {
+    function postIds() { //Returns a list of POSTids
         //Get post ID'S
         $dirs = glob(__DIR__ . "/data/posts" . '/*' , GLOB_ONLYDIR);
         $postids = array();
@@ -40,7 +40,7 @@ class MyCMS {
         }
         return $postids;
     }
-    function newPost($author, $date, $title, $content){
+    function newPost($author, $date, $title, $content){//Create new post
         //Get post ID'S
         $postids = $this->postIds();
         $newid = max($postids)+1;
@@ -63,7 +63,7 @@ class MyCMS {
         }
 
     }
-    function getPost($id) {
+    function getPost($id) {//Returns array of post id
         //Get post ID'S
         $dirs = glob(__DIR__ . "/data/posts" . '/*' , GLOB_ONLYDIR);
         $postids = array();
@@ -73,8 +73,8 @@ class MyCMS {
             $a = (int) $a;
             array_push($postids, $a);
         }
-        /*if (array_search($id, $postids)) {
-            exit("Post not found");
+        /*if (!array_search($id, $postids)) {
+            return array(Error => "Post not found");
         }*/
         $postlocation = __DIR__ . "/data/posts/" . (string) $id . "/post.json";
         $post = file_get_contents($postlocation);

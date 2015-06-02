@@ -2,5 +2,5 @@
     "author": "Jayden",
     "date": "2015-04-02",
     "title": "Templates",
-    "content": "<img src=\"http:\/\/i.imgur.com\/dEkBB1I.png\" style=\"border:solid 1px black;\">\n<p>I added support for templates today. Due to my hate for THE CMS THAT SHALL NOT BE NAMED not being as customizable as I would wish, templates allow for you to use simple custom tags such as {TITLE} and {AUTHOR} to design your own way to show your own content <\/p>"
+    "content": "<img src=\"http:\/\/i.imgur.com\/0mkLvwy.png\" style=\"border:solid 1px black;max-width:80%;\">\n<p>I added support for templates today. Due to my hate for THE CMS THAT SHALL NOT BE NAMED not being as customizable as I would wish, templates allow for you to use simple custom tags such as {TITLE} and {AUTHOR} to design your own way to show your own content <\/p>"
 }

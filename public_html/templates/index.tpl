@@ -26,6 +26,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="img/favicon.png">
+  <link href="themes/prism.css" rel="stylesheet" />
   
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -98,7 +99,7 @@
 								<li class="divider">
 								</li>
 								<li>
-									<a href="#">Separated link</a>
+									<a href="auth.php[@actionparms]">[@action]</a>
 								</li>
 							</ul>
 						</li>
@@ -122,8 +123,25 @@
 					[@post->2->content]
 				</p>
 			</div>
+			<div class="jumbotron">
+				<h1>
+					[@post->3->title]
+				</h1>
+				<p>
+					[@post->3->content]
+				</p>
+			</div>
+			<div class="jumbotron">
+				<h1>
+					[@post->4->title]
+				</h1>
+				<p>
+					[@post->4->content]
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
+<script src="prism.js"></script>
 </body>
 </html>
